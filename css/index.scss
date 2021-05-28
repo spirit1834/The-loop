@@ -1,0 +1,315 @@
+@import "./variables.scss";
+html {
+  font-size: 10px;
+  font-family: Montserrat;
+}
+a {
+  text-decoration-line: none;
+  color: $_dark;
+}
+.page {
+  &-light {
+    background: $_light;
+  }
+  &-dark {
+    background: $_dark;
+  }
+}
+.wrapper {
+  max-width: 111rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5rem;
+  margin-left: 6.5rem;
+  margin-bottom: 13.1rem;
+  &__logo-title {
+    margin-left: -7.8rem;
+  }
+}
+.nav {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: -16.8rem;
+  &-item {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    margin-left: 5.2rem;
+    letter-spacing: 0.03em;
+    &-02 {
+      margin-left: 4.6rem;
+    }
+    &-03 {
+      margin-left: 4.7rem;
+    }
+    &-04 {
+      position: relative;
+      left: 2.9rem;
+    }
+    &-05 {
+      position: relative;
+      left: 1.3rem;
+    }
+  }
+}
+.cart {
+  background: url(../pictures/cart.png);
+  display: block;
+  background-repeat: no-repeat;
+  width: 3rem;
+  height: 3rem;
+  padding-left: 5rem;
+  background-position: 0 center;
+  position: relative;
+  left: -6.3rem;
+  &-count {
+    background-image: url(../pictures/cart-num.svg);
+    display: block;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 15px;
+    text-align: center;
+    color: $_white;
+    padding: 1rem 2.4rem;
+    margin-left: -0.5rem;
+  }
+}
+.main {
+  height: 50.5rem;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -5.3rem;
+  &-item {
+    flex: 0 0 50%;
+  }
+  .sale {
+    &-description {
+      font-size: 3rem;
+      line-height: 3.7rem;
+      letter-spacing: 0.02em;
+      color: $_black;
+      margin-bottom: 2.5rem;
+    }
+    &-title {
+      width: 57rem;
+      font-weight: bold;
+      font-size: 5.5rem;
+      line-height: 6.7rem;
+      letter-spacing: 0.31rem;
+      color: $_black;
+      text-transform: uppercase;
+      margin-top: 2.5rem;
+      margin-bottom: 5.8rem;
+    }
+  }
+}
+.box {
+  position: relative;
+  left: -2.7rem;
+  top: -0.6rem;
+  &-price {
+    position: absolute;
+    top: 4.2rem;
+    right: 2.7rem;
+    text-align: right;
+    font-weight: bold;
+    &__old {
+      font-size: 2.4rem;
+      line-height: 2.9rem;
+      letter-spacing: 0.05em;
+      margin-right: 0.7rem;
+      color: $_black;
+    }
+    &__new {
+      font-size: 4.2rem;
+      line-height: 5.1rem;
+      letter-spacing: 0.13rem;
+      color: $_important;
+      margin-top: 1.5rem;
+    }
+  }
+}
+.btn {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: 0.03em;
+  color: $_white;
+  background: $_accent;
+  padding: 1.7rem 2.9rem 1.8rem 3rem;
+  text-transform: uppercase;
+  &-collection {
+    padding: 0.3rem 3rem 0.7rem;
+    margin-left: -6.2rem;
+  }
+}
+.notice {
+  width: 100%;
+  height: 23.5rem;
+  text-align: center;
+  margin-top: -2rem;
+  color: $_white;
+  &-title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+    padding-top: 8rem;
+    margin-left: -10.4rem;
+  }
+  &-description {
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 26px;
+    padding-top: 0.5rem;
+    letter-spacing: -0.02rem;
+    margin-left: -10.8rem;
+  }
+}
+.collection {
+  display: flex;
+  justify-content: space-between;
+  &-item {
+    padding: 0 1.5rem;
+    flex: 0 0 96rem;
+    text-align: center;
+    height: 25rem;
+  }
+
+  &-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+    color: $_black;
+    text-transform: uppercase;
+    margin-left: 17.3rem;
+    margin-top: 6.3rem;
+  }
+  &-description {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: $_black;
+    margin-left: 8.7rem;
+    margin-top: -0.3rem;
+    margin-bottom: 3.8rem;
+  }
+  &-man {
+    background-image: url(../pictures/man-picture.png);
+    background-repeat: no-repeat;
+    background-size: 19rem 17.1rem;
+    background-position: calc(100% - 4.6rem) bottom;
+  }
+  &-woman {
+    text-align: left;
+    background-image: url(../pictures/woman-picture.png);
+    background-repeat: no-repeat;
+    background-size: 19rem 17.1rem;
+    background-position: calc(100% - 52.2rem) bottom;
+    &__title {
+      margin-left: -5.3rem;
+    }
+    &__description {
+      margin-left: -5.1rem;
+    }
+    &__btn {
+      margin-left: -5.2rem;
+    }
+  }
+}
+.models {
+  display: flex;
+  margin-top: 10rem;
+  margin-bottom: 12rem;
+  &__title {
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 4.4rem;
+    letter-spacing: 0.19rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 121px;
+    margin-left: -103px;
+  }
+  &__description {
+    width: 11.2rem;
+    height: 2.9rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    text-align: center;
+    color: $_black;
+    margin-left: 7.2rem;
+    margin-top: 26.2rem;
+  }
+  &__price {
+    width: 9.3rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    text-align: center;
+    color: $_accent;
+    margin-top: 30.5rem;
+    margin-left: -10.2rem;
+  }
+  &__model {
+    display: flex;
+    width: 25.5rem;
+    height: 35rem;
+  }
+  &__man-model {
+    background-image: url(../pictures/man-card.svg);
+  }
+  &__woman-model {
+    background-image: url(../pictures/woman-card.svg);
+  }
+  &-ml {
+    margin-left: 3rem;
+    &-01 {
+      margin-left: 40.4rem;
+    }
+  }
+  &-btn {
+    padding: 19px 37px 17px 35px;
+    margin-left: 85.1rem;
+    &__row {
+      position: relative;
+      top: -0.3rem;
+      left: 0.4rem;
+    }
+  }
+}
+.footer {
+  display: flex;
+  margin-top: 16.8rem;
+  &__logo-title {
+    margin-left: 40.5rem;
+    padding-top: 5rem;
+  }
+  &-links {
+    list-style: none;
+  }
+  &-link {
+    color: $_gray;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    margin-top: 1rem;
+    &__title {
+      color: $_white;
+      font-weight: bold;
+      font-size: 10px;
+      line-height: 12px;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+  }
+}
