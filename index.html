@@ -24,11 +24,12 @@
       <div class="wrapper">
         <header class="header">
           <nav>
-            <ul class="nav">
-              <li class="nav-item"><a href="#">Для мужчин</a></li>
-              <li class="nav-item nav-item-02"><a href="#">Для женщин</a></li>
-              <li class="nav-item nav-item-03"><a href="#">Для детей</a></li>
-            </ul>
+              <ul class="nav">
+                <li class="nav-item nav-item-00"><a href="#">Категории</a></li>
+                <li class="nav-item nav-item-01"><a href="#">Для мужчин</a></li>
+                <li class="nav-item nav-item-02"><a href="#">Для женщин</a></li>
+                <li class="nav-item nav-item-03"><a href="#">Для детей</a></li>
+              </ul>
           </nav>
           <img
             class="header__logo-title"
@@ -72,13 +73,15 @@
     <div class="page-light">
       <div class="collection">
         <div class="collection-item collection-man">
+          <div class="collection-man__box">
           <h2 class="collection-title">Мужская коллекция</h2>
           <p class="collection-description">Обувь, полуверы, костюмы</p>
-          <a href="#" class="btn btn-collection"
+          <a href="#" class="btn btn-collection  collection-man__btn"
             ><img src="./pictures/Arrow.svg" alt=""
-          /></a>
+          /></a></div>
         </div>
         <div class="collection-item collection-woman">
+          <div class="collection-woman__box">
           <h2 class="collection-title collection-woman__title">
             Женская коллекция
           </h2>
@@ -88,6 +91,7 @@
           <a href="#" class="btn btn-collection collection-woman__btn"
             ><img src="./pictures/Arrow.svg" alt=""
           /></a>
+        </div>
         </div>
       </div>
     </div>
@@ -103,7 +107,7 @@
           <div class="models__description">Коктейльное платье</div>
           <div class="models__price">₽ 40 000</div>
         </div>
-        <div class="models__model models__woman-model models-ml">
+        <div class="models__model models__woman-model models-ml-03">
           <div class="models__description">Коктейльное платье</div>
           <div class="models__price">₽ 40 000</div>
         </div>
@@ -112,10 +116,12 @@
           <div class="models__price">₽ 40 000</div>
         </div>
       </div>
-      <a href="#" class="btn models-btn"
+      <div class="models-btn__box">
+      <a href="#" class="btn models-btn__box-btn"
         >все модели
-        <img class="models-btn__row" src="./pictures/Arrow.svg" alt=""
+        <img class="models-btn__box-btn__row" src="./pictures/Arrow.svg" alt=""
       /></a>
+      </div>
     </div>
     <footer>
       <div class="page-dark footer">
@@ -125,44 +131,49 @@
           alt="Logo"
         />
         <ul class="footer-links footer-links-01">
-          <li class="footer-link__title">Основные ссылки</li>
-          <li><a href="#" class="footer-link">О компани</a>и</li>
+          <li class="footer-link__title footer-link__title-01">Основные ссылки</li>
+          <li><a href="#" class="footer-link">О компании</a></li>
           <li><a href="#" class="footer-link">Каталог</a></li>
-          <li><a href="#" class="footer-link">Доставка</a></li>
+          <li class="footer-li-link"><a href="#" class="footer-link">Доставка</a></li>
           <li><a href="#" class="footer-link">Оплата</a></li>
         </ul>
         <ul class="footer-links footer-links-02">
           <li class="footer-link__title">Категории</li>
           <li><a href="#" class="footer-link">Мужская одежда</a></li>
           <li><a href="#" class="footer-link">Женская одежда</a></li>
-          <li><a href="#" class="footer-link">Детская одежда</a></li>
+          <li class="footer-li-link"><a href="#" class="footer-link">Детская одежда</a></li>
           <li><a href="#" class="footer-link">Для животных</a></li>
         </ul>
         <ul class="footer-links footer-links-03">
           <li class="footer-link__title">Полезные ссылки</li>
           <li><a href="#" class="footer-link">Таблица размеров</a></li>
           <li><a href="#" class="footer-link">Блог о моде</a></li>
-          <li><a href="#" class="footer-link">Наша миссия</a></li>
+          <li class="footer-li-link"><a href="#" class="footer-link">Наша миссия</a></li>
         </ul>
         <ul class="footer-links footer-links-04">
           <li class="footer-link__title">Соц сети</li>
-          <li>
+          <li class="footer-li-last-link-01">
             <a href="#" class="footer-link"
-              ><img src="./pictures/vk-icon.png" alt="" />VK.com</a
+              ><img class="footer-link__picture footer-link__picture-01" src="./pictures/vk-icon.png" alt="" />VK.com</a
             >
           </li>
-          <li>
+          <li class="footer-li-last-link-02">
             <a href="#" class="footer-link"
-              ><img src="./pictures/facebook-icon.png" alt="" />Facebook</a
+              ><img class="footer-link__picture footer-link__picture-02" src="./pictures/facebook-icon.png" alt="" />Facebook</a
             >
           </li>
-          <li>
+          <li class="footer-li-last-link-03">
             <a href="#" class="footer-link"
-              ><img src="./pictures/instagram-icon.png" alt="" />Instagram</a
+              ><img class="footer-link__picture footer-link__picture-03" src="./pictures/instagram-icon.png" alt="" />Instagram</a
             >
           </li>
         </ul>
       </div>
     </footer>
+    <div class="copyright">
+      <div class="copyright-description">Copyright © 2021. Все права защищены</div>
+      <div class="copyright-politic">Политика приватности</div>
+    </div>
   </body>
+  <script src="./js/index.js"></script>
 </html>

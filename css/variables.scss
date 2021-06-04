@@ -7,3 +7,51 @@ $_gray: #cbcfd4;
 $_light-gray: #f4f4f4;
 $_dark-gray: #8d8d8d;
 $_important: #d84033;
+
+@mixin breakpoint($_point) {
+    @if $_point == xxl{
+        @media(max-width: 1400px){
+            @content;
+        }
+    }
+    @if $_point == xl{
+        @media(max-width: 1140px){
+            @content;
+        }
+    }
+    @if $_point == xl-01{
+        @media(max-width: 1066px){
+            @content;
+        }
+    }
+    @else if $_point == lg{
+        @media(max-width: 992px){
+            @content;
+        }
+    }
+    @else if $_point == lg-01{
+        @media(max-width: 880px){
+            @content;
+        }
+    }
+    @else if $_point == md{
+        @media(max-width:768px){
+            @content;
+        }
+    }
+    @else if $_point == md-01{
+        @media(max-width:672px){
+            @content;
+        }
+    }
+    @else if $_point == sm{
+        @media(max-width:576px){
+            @content;
+        }
+    }
+    @else if $_point == xs{
+        @media(max-width:320px){
+            @content;
+        }
+    }
+}

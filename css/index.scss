@@ -4,7 +4,8 @@ html {
   font-family: Montserrat;
 }
 a {
-  text-decoration-line: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
   color: $_dark;
 }
 .page {
@@ -28,46 +29,124 @@ a {
   margin-left: 6.5rem;
   margin-bottom: 13.1rem;
   &__logo-title {
-    margin-left: -7.8rem;
+    margin-left: 3.5rem;
+    @include breakpoint(lg){
+      margin-left: -6.4rem;
+    }
+    @include breakpoint(lg-01){
+      margin-left: -20.4rem;
+    }
+    @include breakpoint(md){
+      width:15rem;
+    }
+    @include breakpoint(md-01){
+      margin-left: 2rem;
+    }
   }
 }
 .nav {
   display: flex;
   list-style-type: none;
   padding-left: 0;
-  margin-left: -16.8rem;
+  margin-left: -23rem;
+  @include breakpoint(lg){
+    margin-left: -25rem;
+}
   &-item {
+    width:9.8rem;
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 1.7rem;
-    margin-left: 5.2rem;
+    margin-left: 13.2rem;
     letter-spacing: 0.03em;
+    @include breakpoint(md-01){
+        display: none;
+    }
+    &-00{
+      display: none;
+      @include breakpoint(md-01){
+        display: flex;
+        margin-left: 20.6rem;
+      }
+    }
+    &-01{
+      margin-left: 19rem;
+      @include breakpoint(lg-01){
+        margin-left: 21rem;
+      }
+      @include breakpoint(md){
+        margin-left:19.8rem
+      }
+    }
     &-02 {
-      margin-left: 4.6rem;
+      margin-left: 4.3rem;
+      @include breakpoint(lg){
+        margin-left: 1.7rem;
+      }
     }
     &-03 {
       margin-left: 4.7rem;
+      @include breakpoint(lg){
+        margin-left: 1.7rem;
+        margin-right: 7.3rem;
+      }
     }
     &-04 {
       position: relative;
-      left: 2.9rem;
+      left: 14.4rem;
+      @include breakpoint(xl){
+        left: 12.4rem;
+      }      @include breakpoint(lg){
+        font-size:1.2rem;
+        left: 14.9rem;
+      }
+      @include breakpoint(lg-01){
+        display: none;
+      }
+      @include breakpoint(md-01){
+        display: none;
+      }
+
     }
     &-05 {
       position: relative;
-      left: 1.3rem;
+      left: .5rem;
+      @include breakpoint(xl){
+        left: -2.5rem;
+      }
+      @include breakpoint(lg){
+        font-size: 1.2rem;
+        left: -.7rem;
+      }
+      @include breakpoint(lg-01){
+        display: none;
+      }
+      @include breakpoint(md-01){
+        display: flex;
+        margin-left: 28.7rem;
+      }
     }
   }
 }
+
 .cart {
   background: url(../pictures/cart.png);
   display: block;
   background-repeat: no-repeat;
-  width: 3rem;
   height: 3rem;
   padding-left: 5rem;
   background-position: 0 center;
   position: relative;
-  left: -6.3rem;
+  left:.3rem;
+  @include breakpoint(xl){
+    left: -1.7rem
+  }
+  @include breakpoint(lg){
+    left:-.7rem
+  }
+  @include breakpoint(md-01){
+    left: -2.2rem;
+  }
   &-count {
     background-image: url(../pictures/cart-num.svg);
     display: block;
@@ -83,12 +162,31 @@ a {
   }
 }
 .main {
-  height: 50.5rem;
+  height: 53.9rem;
   display: flex;
   justify-content: space-between;
-  margin-left: -5.3rem;
+  margin-left: 2.4rem;
+  @include breakpoint(xxl){
+    height: 43.2rem;
+    margin-left: 3.7rem;
+  }
+  @include breakpoint(xl){
+    height: 65.2rem;
+    margin-left: 10.6rem;
+  }
+  @include breakpoint(lg){
+    height: 67.5rem;
+  }
+  @include breakpoint(md){
+    margin-left: 4rem;
+  }
   &-item {
     flex: 0 0 50%;
+    @include breakpoint(lg){
+    }
+    @include breakpoint(md){
+      margin-left: 0;
+    }
   }
   .sale {
     &-description {
@@ -97,6 +195,10 @@ a {
       letter-spacing: 0.02em;
       color: $_black;
       margin-bottom: 2.5rem;
+      @include breakpoint(md-01){
+        width: 34rem;
+        font-weight: 700;
+      }
     }
     &-title {
       width: 57rem;
@@ -108,17 +210,57 @@ a {
       text-transform: uppercase;
       margin-top: 2.5rem;
       margin-bottom: 5.8rem;
+      @include breakpoint(md){
+        font-size: 4.7rem;
+        line-height: 5.2rem;
+      }
+      @include breakpoint(md-01){
+        width: 28rem;
+        font-size: 2.6rem;
+        font-weight: 600;
+      }
     }
   }
 }
 .box {
   position: relative;
-  left: -2.7rem;
+  left: -1.5rem;
   top: -0.6rem;
+  @include breakpoint(xxl){
+    left:-3.5rem
+  }
+  @include breakpoint(xl){
+    left: -59.7rem;
+    top: 24.4rem;
+  } 
+  @include breakpoint(lg){
+    position: relative;
+    left: -59rem;
+    top: 26.4rem;
+  }
+  @include breakpoint(lg-01){
+    left: -58.7rem;
+  }
+  @include breakpoint(md){
+    margin-left: 0rem;
+  }
+  @include breakpoint(md-01){
+    margin-left: 20.2rem;
+    padding-top: 3.7rem;
+  }
+  &-image{
+    @include breakpoint(xxl){
+      width: 46.2rem;
+    }
+    @include breakpoint(md-01){
+      width: 48rem;
+    }
+  }
+
   &-price {
     position: absolute;
     top: 4.2rem;
-    right: 2.7rem;
+    right: .2rem;
     text-align: right;
     font-weight: bold;
     &__old {
@@ -147,7 +289,10 @@ a {
   text-transform: uppercase;
   &-collection {
     padding: 0.3rem 3rem 0.7rem;
-    margin-left: -6.2rem;
+    margin-left: 22.7rem;
+    @include breakpoint(xl){
+      margin-left: 5.6rem;
+    } 
   }
 }
 .notice {
@@ -155,6 +300,8 @@ a {
   height: 23.5rem;
   text-align: center;
   margin-top: -2rem;
+  display: flex;
+  justify-content: center;
   color: $_white;
   &-title {
     font-weight: bold;
@@ -162,74 +309,109 @@ a {
     line-height: 37px;
     letter-spacing: 0.12rem;
     text-transform: uppercase;
-    padding-top: 8rem;
-    margin-left: -10.4rem;
+    padding-top:5.9rem;
+    margin-left: .9rem;
+    @include breakpoint(md){
+      font-size: 2.6rem;
+      padding-top: 6rem;
+      margin-left: 0;
+    }
   }
   &-description {
     font-weight: 300;
     font-size: 21px;
     line-height: 26px;
-    padding-top: 0.5rem;
+    padding-top: 0.3rem;
     letter-spacing: -0.02rem;
-    margin-left: -10.8rem;
+    margin-left: .6rem;
   }
 }
 .collection {
   display: flex;
   justify-content: space-between;
-  &-item {
-    padding: 0 1.5rem;
-    flex: 0 0 96rem;
-    text-align: center;
+  @include breakpoint(lg){
+    flex-wrap: wrap;
+  }
+  &-item{
+    flex: 0 0 50%;
+    background:$_light;
     height: 25rem;
+    @include breakpoint(lg){
+      flex: 0 0 100%;
+    }
   }
-
-  &-title {
+  &-title{
     font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
     letter-spacing: 0.03em;
-    color: $_black;
     text-transform: uppercase;
-    margin-left: 17.3rem;
-    margin-top: 6.3rem;
+    margin-left: 23rem;
+    margin-top: 61px;
   }
-  &-description {
+  &-description{
     font-weight: 300;
-    font-size: 16px;
-    line-height: 20px;
-    color: $_black;
-    margin-left: 8.7rem;
-    margin-top: -0.3rem;
-    margin-bottom: 3.8rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-left: 5.6rem;
+    margin-top:-.2rem;
+    margin-bottom: 3.7rem;
   }
-  &-man {
-    background-image: url(../pictures/man-picture.png);
-    background-repeat: no-repeat;
-    background-size: 19rem 17.1rem;
-    background-position: calc(100% - 4.6rem) bottom;
+  &-man{
+  background-image:url(../pictures/man-picture.png);
+  background-repeat:no-repeat;
+  background-position: calc(100% - 1.2rem) bottom;
+  @include breakpoint(xxl){
+    background-position: calc(100% - .9rem) bottom;
+  } 
   }
-  &-woman {
-    text-align: left;
-    background-image: url(../pictures/woman-picture.png);
-    background-repeat: no-repeat;
-    background-size: 19rem 17.1rem;
-    background-position: calc(100% - 52.2rem) bottom;
-    &__title {
-      margin-left: -5.3rem;
+  &-woman{
+  background-image: url(../pictures/woman-picture.png);
+  background-repeat:no-repeat;
+  background-position: calc(100% - 21.4rem) bottom;
+  @include breakpoint(xxl){
+    background-position: calc(100% - .9rem) bottom;
+  } 
+  @include breakpoint(lg){
+    background-position: calc(100% - 6.9rem) bottom;
+  }
+  &__title{
+    margin-left: 4rem;
+    @include breakpoint(xxl){
+      margin-left: 5.6rem;
+    } 
+    @include breakpoint(lg){
+      margin-left: 17.5rem;
     }
-    &__description {
-      margin-left: -5.1rem;
+  }
+  &__description{
+    margin-left: 3.9rem;
+    @include breakpoint(xxl){
+      margin-left: 5.6rem;
+    } 
+    @include breakpoint(lg){
+      margin-left: 17.5rem;
     }
-    &__btn {
-      margin-left: -5.2rem;
+  }
+  &__btn{
+    margin-left: 3.8rem;
+    @include breakpoint(xxl){
+      margin-left: 5.6rem;
+    } 
+    @include breakpoint(lg){
+      margin-left: 17.3rem;
     }
+  }
   }
 }
 .models {
   display: flex;
   margin-top: 10rem;
-  margin-bottom: 12rem;
+  margin-bottom: 11.6rem;
+  @include breakpoint(xxl){
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   &__title {
     font-weight: bold;
     font-size: 2.4rem;
@@ -239,6 +421,9 @@ a {
     text-align: center;
     padding-top: 121px;
     margin-left: -103px;
+    @include breakpoint(xxl){
+      margin-left: 0;
+    } 
   }
   &__description {
     width: 11.2rem;
@@ -261,11 +446,7 @@ a {
     margin-top: 30.5rem;
     margin-left: -10.2rem;
   }
-  &__model {
-    display: flex;
-    width: 25.5rem;
-    height: 35rem;
-  }
+
   &__man-model {
     background-image: url(../pictures/man-card.svg);
   }
@@ -275,41 +456,237 @@ a {
   &-ml {
     margin-left: 3rem;
     &-01 {
-      margin-left: 40.4rem;
+      margin-left: 20.8rem;
+      @include breakpoint(lg){
+        margin-left: 5.5rem;
+        margin-right: 4rem;
+        margin-bottom: 5rem;
+      }
+      &-03{
+        margin-left: 2.9rem;
+        @include breakpoint(lg){
+          margin-left: 5.5rem;
+          margin-right: 4rem;
+        }
+      }
     }
   }
-  &-btn {
-    padding: 19px 37px 17px 35px;
-    margin-left: 85.1rem;
-    &__row {
-      position: relative;
-      top: -0.3rem;
-      left: 0.4rem;
+  &-btn__box {
+    display:flex;
+    justify-content: center;
+    &-btn{
+        padding: 19px 37px 17px 35px;
+        margin-left: .7rem;
+        margin-top: -1.6rem;
+      @include breakpoint(xl){
+        margin-left: 0;
+      } 
+      @include breakpoint(lg){
+        margin-left: 0;
+        margin-top: 0;
+      }
+        &__row {
+          position: relative;
+          top: -0.3rem;
+          left: 0.4rem;
+        }
+      }
+  }  
+  &__model {
+    display: flex;
+    width: 25.5rem;
+    height: 35rem;
+    @include breakpoint(xxl){
+      margin-left:0;
+      margin-right:0;
     }
   }
 }
 .footer {
   display: flex;
-  margin-top: 16.8rem;
+  margin-top: 15.3rem;
+  height:31.1rem;
   &__logo-title {
-    margin-left: 40.5rem;
-    padding-top: 5rem;
+    margin-left: 20.8rem;
+    padding-top: .6rem;
+    width:20.1rem;
+    margin-top: -13.4rem;
+    @include breakpoint(xxl){
+      margin-left: 4.2rem;
+    }
+    @include breakpoint(xl){
+      margin-left: 7.2rem;
+      margin-top: -22.4rem;
+    }
+    @include breakpoint(lg){
+      margin-left: 4.2rem;
+      margin-top: -24.4rem;
+    }
   }
   &-links {
     list-style: none;
+    position: relative;
+    top: 71px;
+    left: 184px;
   }
   &-link {
     color: $_gray;
     font-size: 1.4rem;
-    line-height: 2.2rem;
+    line-height: 3.5rem;
     margin-top: 1rem;
+    @include breakpoint(xl){
+      font-size:1.2rem
+    }
+    @include breakpoint(lg-01){
+      font-size:1rem
+    }
+
     &__title {
       color: $_white;
       font-weight: bold;
       font-size: 10px;
       line-height: 12px;
       text-transform: uppercase;
-      margin-bottom: 2rem;
+      margin-bottom: 1.2rem;
+      &01{
+        @include breakpoint(lg){
+          width: 11.5rem;
+        }
+      }
+    }
+    &__picture{
+      margin-right:.8rem;
+      &-01{
+        margin-left: .2rem;
+      }
+      &-02{margin-left: 4px;
+        margin-right: 10px;
+      }
+      &-03{margin-left: 5px;
+        margin-right: 10px;
+      }
     }
   }
+  &-links{
+    position:relative;
+    top:7.1rem;
+    @include breakpoint(xl){
+      top:8.1rem
+    }
+    @include breakpoint(md){
+      min-width: 9rem;
+    }
+    &-01{
+      left: 18.4rem;
+      @include breakpoint(xxl){
+        left: 5.4rem;
+      }
+      @include breakpoint(lg){
+        left: -23.6rem;
+      }
+    }
+    &-02{
+      left:23rem;
+      @include breakpoint(xxl){
+        left: 10rem;
+      }
+      @include breakpoint(xl){
+        left: -14rem;
+      }
+      @include breakpoint(lg){
+        left: -18rem;
+        width: 15rem;
+      }
+      @include breakpoint(md){
+        left:-20rem
+      }
+      @include breakpoint(md-01){
+        left: -21rem;
+      }
+    }
+    &-03{
+      left: 26.5rem;
+      @include breakpoint(xxl){
+        left: 15.5rem;
+      }
+      @include breakpoint(xl){
+        left: -3.5rem;
+      }
+      @include breakpoint(lg){
+        left: -12rem;
+      }
+      @include breakpoint(md){
+        left:-15rem
+      }
+      @include breakpoint(md-01){
+        display: none;
+      }
+    }
+    &-04{
+      left:27.9rem;   
+      @include breakpoint(xxl){
+        left: 19.9rem;
+      }
+      @include breakpoint(xl){
+        left: 3.9rem;
+      }
+      @include breakpoint(lg){
+        left: -7.1rem;
+      }
+      @include breakpoint(md){
+        left:-13.1rem
+      }
+      @include breakpoint(md-01){
+        left: -15.1rem;
+      }
+    }
+  }
+  &-li{
+    &-link{
+      margin-top:-.5rem
+    }
+    &-last-link-01{
+      @include breakpoint(lg){
+        font-size: 1.3rem;
+      }
+    }
+    &-last-link-02{
+      margin-top: -.1rem;
+      @include breakpoint(lg){
+        font-size: 1.3rem;
+      }
+    }
+    &-last-link-03{
+      margin-top:-.2rem;
+      @include breakpoint(lg){
+        font-size: 1.3rem;
+        width:10.2rem;
+      }
+    }
+  }
+}
+.copyright{
+  width:100%;
+  display: flex;
+  justify-content:space-around;
+  &-description{
+    padding-top:2.9rem;
+    padding-bottom:3rem;
+    color:$_dark;
+    font-size: 14px;
+    line-height: 22px;
+    margin-left:-10.3rem;
+    @include breakpoint(lg){
+      margin-left: 0;
+    }
+  }
+  &-politic{
+    color:$_dark;
+    font-size: 14px;
+    line-height: 22px;
+    margin-left:14.2rem;
+    padding-top:2.9rem; 
+    @include breakpoint(lg){
+      margin-left: 0;}
+    }
 }
